@@ -1,24 +1,20 @@
 {
-  "name": "Bun Devcontainer Template",
-  "image": "oven/bun:1.3.0-slim",
-  "runArgs": [
-    "--env-file=.devcontainer/.env"
-  ],
-  "initializeCommand": "./.devcontainer/initializeCommand.sh",
-  "remoteUser": "bun",
-  "workspaceFolder": "/home/bun/app",
-  "mounts": [
-    "source=${localWorkspaceFolder},target=${containerWorkspaceFolder},type=bind"
-  ],
+  "name": "Turborepo Template",
+  "dockerComposeFile": "compose.yml",
+  "service": "app",
+  "remoteUser": "node",
+  "workspaceFolder": "/home/node/app",
+  "initializeCommand": ".devcontainer/initializeCommand.sh",
   "features": {
-    "ghcr.io/devcontainers/features/common-utils:2": {} // sudo, git, etc
+    "ghcr.io/devcontainers/features/common-utils:2": {} // git, sudo, etc.
   },
   "customizations": {
     "vscode": {
       "extensions": [
         "oderwat.indent-rainbow",
+        "biomejs.biome",
         "streetsidesoftware.code-spell-checker",
-        "biomejs.biome"
+        "fabiospampinato.vscode-terminals"
       ]
     }
   }
