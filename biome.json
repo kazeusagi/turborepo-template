@@ -1,0 +1,77 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.2.4/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "ignoreUnknown": false
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "correctness": {
+        "noUnusedImports": { "level": "warn", "fix": "safe", "options": {} },
+        "useExhaustiveDependencies": "info"
+      },
+      "suspicious": {
+        "noExplicitAny": "info"
+      },
+      "style": {
+        "useImportType": "off",
+
+        "useConsistentCurlyBraces": {
+          "fix": "safe",
+          "level": "error",
+          "options": {}
+        }
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "jsxQuoteStyle": "single",
+      "lineWidth": 100
+    },
+    "parser": {
+      "unsafeParameterDecoratorsEnabled": true
+    }
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [
+              [":NODE:", ":BUN:"],
+              ":BLANK_LINE:",
+
+              "next",
+              "next/**",
+              "react",
+              "jotai",
+              ":BLANK_LINE:",
+
+              "@mui/material",
+              "@mui/**",
+              ":BLANK_LINE:",
+
+              "@repo/**",
+              "@/**"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
