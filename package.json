@@ -1,11 +1,22 @@
 {
-	"scripts": {
-		"lint": "biome check --diagnostic-level warn"
-	},
-  "dependencies": {},
+  "name": "turborepo-template",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+		"lint": "biome check --diagnostic-level warn",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types"
+  },
   "devDependencies": {
+    "turbo": "^2.6.0",
+    "typescript": "5.9.2",
     "@biomejs/biome": "^1.9.4",
     "@types/bun": "^1.2.3",
     "lefthook": "^1.11.0"
-  }
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@9.0.0"
 }
