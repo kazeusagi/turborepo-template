@@ -1,0 +1,24 @@
+{
+  "autorun": true,
+  "terminals": [
+    {
+      "name": "Next.js",
+      "icon": "browser",
+      "focus": true,
+      "command": "pn run dev -F nextjs"
+    },
+    {
+      "name": "NestJS",
+      "icon": "browser",
+      "split": "App",
+      "command": "pn run dev -F nestjs"
+    },
+    {
+      "name": "Terraform",
+      "icon": "cloud",
+      "color": "terminal.ansiCyan",
+      "command": "pn run tf:init",
+      "execute": false
+    }
+  ]
+}
