@@ -2,8 +2,8 @@
   "name": "turborepo-template",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
+    "build": "turbo run build --env-mode=loose",
+    "dev": "turbo run dev --env-mode=loose",
     "lint": "biome check --diagnostic-level warn",
     "check-types": "turbo run check-types"
   },
