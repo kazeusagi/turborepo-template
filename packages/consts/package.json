@@ -3,27 +3,29 @@
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
-  "main": "./dist/entry.js",
-  "types": "./dist/entry.d.ts",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
   "files": [
-    "./dist/**"
+    "./src/**"
   ],
   "publishConfig": {
     "access": "public"
   },
   "exports": {
     ".": {
-      "import": "./dist/entry.js",
-      "require": "./dist/entry.js"
+      "import": "./src/index.ts",
+      "require": "./src/index.ts"
     },
     "./*": {
-      "import": "./dist/*.js",
-      "require": "./dist/*.js"
+      "import": "./src/*.ts",
+      "require": "./src/*.ts"
     }
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
     "@types/node": "^22.10.7",
+    "ts-loader": "^9.4.3",
+    "ts-node": "^10.9.2",
     "typescript": "5.5.4"
   }
 }
