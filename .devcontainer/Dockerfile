@@ -4,7 +4,7 @@ FROM node:24-bookworm-slim
 RUN npm install -g pnpm@10.19.0
 # alias
 RUN echo 'alias pn="pnpm"' >> /home/node/.bashrc
-RUN echo 'alias pnx="pnpm exec"' >> /home/node/.bashrc
+RUN echo 'pnx() { if [ "$1" = "-d" ]; then shift; pnpm dlx "$@"; else pnpm exec "$@"; fi; }' >> /home/node/.bashrc
 
 # コンテナを即時終了させない
 CMD ["sleep", "infinity"]
