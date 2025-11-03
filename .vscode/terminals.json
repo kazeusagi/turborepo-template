@@ -10,7 +10,7 @@
     {
       "name": "NestJS",
       "icon": "browser",
-      "split": "App",
+      "split": "Next.js",
       "command": "pn run dev -F nestjs"
     },
     {
